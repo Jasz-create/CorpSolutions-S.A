@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Visitantes - CorpSolutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Visitantes</h1>
+    </header>
+
+    <main>
+        <!-- Formulario de Registro -->
+        <section class="form-section">
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="cedula">Cédula (Formato: 999-999999-9999X):</label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Ej: 001-123456-7890A">
+                    <span class="error-msg" id="errorCedula"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres">
+                    <span class="error-msg" id="errorNombres"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos">
+                    <span class="error-msg" id="errorApellidos"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="departamento">Departamento:</label>
+                    <select id="departamento" name="departamento">
+                        <option value="">Seleccione...</option>
+                        <option value="Boaco">Boaco</option>
+                        <option value="Carazo">Carazo</option>
+                        <option value="Chinandega">Chinandega</option>
+                        <option value="Chontales">Chontales</option>
+                        <option value="Estelí">Estelí</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Jinotega">Jinotega</option>
+                        <option value="León">León</option>
+                        <option value="Madriz">Madriz</option>
+                        <option value="Managua">Managua</option>
+                        <option value="Masaya">Masaya</option>
+                        <option value="Matagalpa">Matagalpa</option>
+                        <option value="Nueva Segovia">Nueva Segovia</option>
+                        <option value="Río San Juan">Río San Juan</option>
+                        <option value="Rivas">Rivas</option>
+                    </select>
+                    <span class="error-msg" id="errorDepartamento"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo">Motivo de la visita:</label>
+                    <textarea id="motivo" name="motivo"></textarea>
+                    <span class="error-msg" id="errorMotivo"></span>
+                </div>
+
+                <button type="submit" class="btn-registrar">Registrar</button>
+            </form>
+        </section>
+
+        <!-- Tabla de Registros -->
+        <section class="tabla-section">
+            <h2>Registros Actuales</h2>
+            <table id="tablaRegistros">
+                <thead>
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Departamento</th>
+                        <th>Motivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas dinámicas desde JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
